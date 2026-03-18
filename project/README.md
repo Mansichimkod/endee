@@ -1,109 +1,111 @@
-# 🚀 AI RAG Project using Endee Vector Database
+# 🤖 AI Document Q&A System (Endee Project)
 
 ## 📌 Project Overview
 
-This project is a simple **Retrieval-Augmented Generation (RAG)** system built using the Endee vector database. It allows users to ask questions and retrieves the most relevant answer from stored data using semantic search.
+This project is an AI-powered Question Answering system that retrieves relevant answers from a predefined dataset using semantic search.
 
-The goal of this project is to demonstrate how vector databases like Endee can be used in real-world AI applications such as question answering systems.
+It uses sentence embeddings to understand the meaning of user queries and returns the most relevant answer from the dataset.
 
 ---
 
-## ⚙️ Features
+## 🚀 Features
 
-* Semantic search using embeddings
-* Simple question-answering system
-* Lightweight and beginner-friendly implementation
-* Demonstrates practical usage of vector database concepts
+* 🔍 Semantic search using embeddings
+* 🤖 AI-based question answering
+* 💬 Chat-like interface using Streamlit
+* ⚡ Fast retrieval using precomputed embeddings
+* 📂 Uses a custom dataset (`data.txt`)
 
 ---
 
 ## 🧠 How It Works
 
-1. Text data is stored and converted into vector embeddings
-2. User enters a query
-3. The query is converted into an embedding
-4. Similarity is calculated between query and stored data
-5. The most relevant result is returned as the answer
+1. The dataset is loaded from `data.txt`
+2. Each sentence is converted into vector embeddings using a transformer model
+3. User query is also converted into an embedding
+4. Cosine similarity (via dot product) is used to find the closest match
+5. The most relevant answer is returned
 
 ---
 
-## 🗂️ Project Structure
+## 🧰 Technologies Used
+
+* Python
+* Streamlit (Frontend UI)
+* Sentence Transformers
+* NumPy
+
+---
+
+## 📦 Use of Endee Vector Database
+
+This project is built as part of the Endee evaluation.
+While the current implementation uses in-memory embeddings for semantic search, the same workflow can be integrated with Endee Vector Database for scalable and efficient vector storage and retrieval.
+
+---
+
+## 📁 Project Structure
 
 ```
-project/
-│── main.py
-│── data.txt
-│── requirements.txt
+endee/
+│── project/
+│   │── app.py          # Streamlit frontend
+│   │── data.txt        # Dataset
 │── README.md
 ```
 
 ---
 
-## 🛠️ Technologies Used
-
-* Python
-* Sentence Transformers
-* NumPy
-* Endee Vector Database
-
----
-
-## 🔗 Use of Endee
-
-In this project, Endee is used as a vector database to:
-
-* Store embeddings of text data
-* Perform similarity search
-* Retrieve relevant information efficiently
-
----
-
 ## ▶️ How to Run the Project
 
-### Step 1: Clone the repository
+### Step 1: Clone Repository
 
-```
+```bash
 git clone https://github.com/YOUR_USERNAME/endee.git
 cd endee
 ```
 
-### Step 2: Install dependencies
+### Step 2: Install Dependencies
 
-```
-pip install -r requirements.txt
-```
-
-### Step 3: Run the project
-
-```
-python main.py
+```bash
+pip install streamlit sentence-transformers numpy
 ```
 
-### Step 4: Ask a question
+### Step 3: Run Application
 
-Example:
+```bash
+streamlit run project/app.py
+```
+
+### Step 4: Open in Browser
 
 ```
-What is AI?
+http://localhost:8501
 ```
 
 ---
 
-## 📊 Example Output
+## 💡 Example Use Cases
 
-```
-Ask something: What is AI?
-Answer: Artificial Intelligence is the simulation of human intelligence.
-```
+* AI-based FAQ system
+* Knowledge retrieval system
+* Educational assistant
+* Basic chatbot
 
 ---
 
-## 🎯 Conclusion
+## 📊 Future Improvements
 
-This project demonstrates a basic implementation of a RAG system using Endee. It can be extended to build advanced AI applications such as chatbots, recommendation systems, and document search engines.
+* 🔗 Integrate Endee vector database fully
+* 📄 Add PDF/document support
+* 🧠 Improve answer generation using LLMs
+* 🌐 Deploy online
 
 ---
 
 ## 👩‍💻 Author
 
-Your Name
+Mansi Chimkod
+
+---
+
